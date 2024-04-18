@@ -19,6 +19,36 @@ function changeCssTheme(themeName){
 }
 
 
+function setThemeToDark(){
+	changeCssTheme("dark");
+}
+
+function setThemeToLight(){
+	changeCssTheme("light");
+}
+
+function toggleCssTheme(){
+	let currentBackgroundColour = getComputedStyle(document.documentElement).getPropertyValue("--background");
+
+
+	// changeCssTheme(currentBackgroundColour == "white" ? "dark" : "light");
+	// changeCssTheme("dark");
+	// changeCssTheme("light");
+
+	console.log("Current background colour is: " + currentBackgroundColour);
+
+	if (currentBackgroundColour == "white"){
+		// we are already in light theme, set it to dark 
+		changeCssTheme("dark");
+		// setThemeToDark();
+	} else {
+		// we are in dark theme, set it to light
+		changeCssTheme("light");
+	}
+}
+
+
+
 <<<<<<< HEAD
 
 function setThemeToDark(){
