@@ -18,6 +18,40 @@ function changeCssTheme(themeName){
 	}
 }
 
+
+
+function setThemeToDark(){
+	changeCssTheme("dark");
+}
+function setThemeToLight(){
+	changeCssTheme("light");
+}
+
+function toggleCssTheme(){
+	let currentBackgroundColour = getComputedStyle(document.documentElement).getPropertyValue("--background");
+	
+	// changeCssTheme(currentBackgroundColour == "white" ? "dark" : "light");
+    // changeCssTheme("dark");
+    // changeCssTheme("light");
+	
+	console.log("current background colour is: " + currentBackgroundColour);
+
+	if (currentBackgroundColour == "white"){
+		// we are in light theme, set it to dark
+		changeCssTheme("dark");
+	} else {
+		changeCssTheme("light");
+		// we are in dark theme, change to light
+	}
+}
+
+
+
+
+
+
+
+
 changeCssTheme("dark");
 
 console.log('Hello from Alex\'s code');
