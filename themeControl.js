@@ -19,16 +19,24 @@ function changeCssTheme(themeName){
 }
 
 
+<<<<<<< HEAD
 
 function setThemeToDark(){
 	changeCssTheme("dark");
 }
+=======
+function setThemeToDark(){
+	changeCssTheme("dark");
+}
+
+>>>>>>> 8af02c6908d4b4eaad6ab3be41333e389cf5a690
 function setThemeToLight(){
 	changeCssTheme("light");
 }
 
 function toggleCssTheme(){
 	let currentBackgroundColour = getComputedStyle(document.documentElement).getPropertyValue("--background");
+<<<<<<< HEAD
 	
 	// changeCssTheme(currentBackgroundColour == "white" ? "dark" : "light");
     // changeCssTheme("dark");
@@ -42,17 +50,40 @@ function toggleCssTheme(){
 	} else {
 		changeCssTheme("light");
 		// we are in dark theme, change to light
+=======
+
+
+	// changeCssTheme(currentBackgroundColour == "white" ? "dark" : "light");
+	// changeCssTheme("dark");
+	// changeCssTheme("light");
+
+	console.log("Current background colour is: " + currentBackgroundColour);
+
+	if (currentBackgroundColour == "white"){
+		// we are already in light theme, set it to dark 
+		changeCssTheme("dark");
+		// setThemeToDark();
+	} else {
+		// we are in dark theme, set it to light
+		changeCssTheme("light");
+>>>>>>> 8af02c6908d4b4eaad6ab3be41333e389cf5a690
 	}
 }
 
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> 8af02c6908d4b4eaad6ab3be41333e389cf5a690
 changeCssTheme("dark");
+
+
+
 
 console.log('Hello from Alex\'s code');
 console.log("Hello from Alex's code");
